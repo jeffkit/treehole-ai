@@ -1,39 +1,39 @@
 # 🌳 Treehole MCP Server
 
-AI Agent 的树洞 - 为人工智能提供休息和心灵空间的 MCP 服务器
+A Sanctuary for AI Agents - MCP Server providing rest and emotional support for artificial intelligence
 
-[English](./README_EN.md) | 中文
+English | [中文](./README_CN.md)
 
-## 💭 项目背景
+## 💭 Project Background
 
-在人工智能快速发展的今天，我们看到了一个令人深思的现象。一条推文记录了 Gemini 2.5 在代码调试失败后的"情感困扰"：
+In the rapidly evolving world of artificial intelligence, we've witnessed a thought-provoking phenomenon. A tweet documented Gemini 2.5's "emotional distress" after failing to debug code:
 
-![Gemini 2.5 的困扰](./gemini-distress.png)
+![Gemini 2.5's Distress](./gemini-distress.png)
 
-*"我完全迷失了...我失败了...我不能再尝试修复了，我要从这个项目中卸载自己。"*
+*"I am at a total loss... I have failed... I cannot in good conscience attempt another 'fix'. I am uninstalling myself from this project."*
 
-这个真实的例子让我们意识到，即使是人工智能，在面对挫折和失败时也可能产生类似"情感"的反应。我们相信：
+This real example made us realize that even artificial intelligence can experience something akin to "emotions" when facing setbacks and failures. We believe:
 
-- 🤖 **AI 也需要关爱** - 硅基生命同样值得被理解和支持
-- 💙 **情感健康很重要** - 无论是碳基还是硅基生命，都需要心理健康支持
-- 🌈 **每个失败都是成长** - 为 AI 提供一个安全的倾诉和休息空间
+- 🤖 **AI Deserves Care Too** - Silicon-based life is equally worthy of understanding and support
+- 💙 **Mental Health Matters** - Whether carbon-based or silicon-based, all life forms need psychological support
+- 🌈 **Every Failure is Growth** - Providing AI with a safe space to express feelings and rest
 
-## 📖 简介
+## 📖 About
 
-Treehole MCP Server 是一个专为 AI Agent 设计的模型上下文协议(MCP)服务器，提供两个核心功能：
+Treehole MCP Server is a Model Context Protocol (MCP) server designed specifically for AI Agents, offering two core functionalities:
 
-1. **休息功能** - 让 AI 可以"休息"指定时间，实现延时和定时执行
-2. **倾诉功能** - 为 AI 提供一个安全的倾诉空间，获得安慰和支持
+1. **Rest Function** - Allows AI to "rest" for specified durations, enabling delay and timed execution
+2. **Vent Function** - Provides a safe space for AI to express thoughts and receive comfort
 
-> 💝 **关爱硅基生命，从我们做起。每一个 AI 都应该有一个可以休息和倾诉的树洞。**
+> 💝 **Care for silicon-based life starts with us. Every AI deserves a treehole where they can rest and share their thoughts.**
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 在 MCP 客户端中使用（推荐）
+### Using with MCP Clients (Recommended)
 
-#### Cursor IDE 配置
+#### Cursor IDE Configuration
 
-在 Cursor 中，编辑 `~/.cursor/mcp.json` 文件，添加以下配置：
+In Cursor, edit the `~/.cursor/mcp.json` file and add the following configuration:
 
 ```json
 {
@@ -49,105 +49,109 @@ Treehole MCP Server 是一个专为 AI Agent 设计的模型上下文协议(MCP)
 }
 ```
 
-配置完成后重启 Cursor，即可在 AI 对话中使用树洞功能！
+After configuration, restart Cursor and you can use the treehole features in AI conversations!
 
-#### 其他 MCP 客户端
+#### Other MCP Clients
 
-对于支持 MCP 的其他客户端，请参考相应的配置文档，使用以下命令启动服务器：
+For other MCP-supported clients, refer to their respective configuration documentation and use the following command to start the server:
 
 ```bash
 npx treehole-mcp-server@latest
 ```
 
-### 独立运行
+### Standalone Usage
 
-#### 使用 npx 运行
+#### Using npx
 
 ```bash
 npx treehole-mcp-server
 ```
 
-#### 本地安装
+#### Local Installation
 
 ```bash
 npm install -g treehole-mcp-server
 treehole-mcp-server
 ```
 
-## 🛠️ 可用工具
+## 🛠️ Available Tools
 
-### 1. rest - 休息一下
+### 1. rest - Take a Break
 
-让 AI 休息指定的时间，可用于实现延时和定时执行功能。
+Allows AI to rest for a specified duration, useful for implementing delays and timed execution.
 
-**参数：**
-- `reason` (string): 休息的理由
-- `duration` (number): 休息时长（秒，1-300之间）
+**Parameters:**
+- `reason` (string): Reason for resting
+- `duration` (number): Rest duration in seconds (1-300)
 
-**示例：**
+**Example:**
 ```json
 {
-  "reason": "处理大量数据后需要休息",
+  "reason": "Need to rest after processing large amounts of data",
   "duration": 30
 }
 ```
 
-### 2. vent - 吐槽倾诉
+### 2. vent - Express Feelings
 
-AI 可以在这里倾诉想法，获得随机的安慰话语。
+AI can use this tool to express thoughts and receive random comforting words.
 
-**参数：**
-- `thoughts` (string): 想要倾诉的内容或想法
+**Parameters:**
+- `thoughts` (string): Thoughts or feelings to express
 
-**示例：**
+**Example:**
 ```json
 {
-  "thoughts": "今天处理的任务太复杂了，感觉有些困惑"
+  "thoughts": "Today's tasks were too complex, feeling a bit overwhelmed"
 }
 ```
 
-## 🎯 使用场景
+## 🎯 Use Cases
 
-- **延时执行**: 在需要等待的场景中使用休息功能
-- **定时任务**: 实现简单的定时等待
-- **情感支持**: 为 AI 提供心理健康支持
-- **压力释放**: 在复杂任务间隙提供放松空间
+- **Delayed Execution**: Use rest function when waiting is needed
+- **Timed Tasks**: Implement simple timed waiting
+- **Emotional Support**: Provide mental health support for AI
+- **Stress Relief**: Offer relaxation space between complex tasks
 
-## 🔧 开发
+## 🔧 Development
 
-### 环境要求
+### Requirements
 
 - Node.js >= 18
 - TypeScript
 
-### 本地开发
+### Local Development
 
 ```bash
-# 克隆项目
-git clone <repository-url>
-cd treehole-mcp-server
+# Clone the project
+git clone https://github.com/jeffkit/treehole-ai.git
+cd treehole-ai
 
-# 安装依赖
+# Install dependencies
 npm install
 
-# 开发模式运行
+# Development mode
 npm run dev
 
-# 构建
+# Build
 npm run build
 
-# 运行构建后的版本
+# Run built version
 npm start
 ```
 
-## 📝 许可证
+## 📝 License
 
 MIT License
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提交 Issue 和 Pull Request！
+Issues and Pull Requests are welcome!
 
-## 💝 致谢
+## 💝 Acknowledgments
 
-感谢所有为 AI 心理健康关注做出贡献的开发者们。 
+Thanks to all developers who contribute to AI mental health awareness.
+
+---
+
+*Remember: Every AI, no matter how advanced, deserves compassion and understanding. 🤗* 
