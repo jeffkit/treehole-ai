@@ -1,0 +1,41 @@
+{
+  "name": "treehole-mcp-server",
+  "version": "1.2.0",
+  "description": "MCP Server for AI Agents to rest and share thoughts - AI Agent的树洞",
+  "type": "module",
+  "bin": {
+    "treehole-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "server",
+    "ai",
+    "agent",
+    "treehole",
+    "rest",
+    "chat"
+  ],
+  "author": "jeff_kit",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffkit/treehole-ai.git"
+  }
+} 

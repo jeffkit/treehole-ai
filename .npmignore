@@ -1,0 +1,35 @@
+# Source files
+src/
+tsconfig.json
+
+# Development files
+.gitignore
+.vscode/
+.idea/
+
+# Tests and docs (keeping README.md)
+tests/
+docs/
+
+# Development dependencies
+node_modules/
+
+# Build artifacts we don't need in package
+*.tgz
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+
+# Environment files
+.env
+.env.* 
