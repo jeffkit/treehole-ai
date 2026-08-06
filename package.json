@@ -1,6 +1,6 @@
 {
   "name": "treehole-mcp-server",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "MCP Server for AI Agents to rest and share thoughts - AI Agent的树洞",
   "type": "module",
   "bin": {
